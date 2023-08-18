@@ -7,7 +7,7 @@ https://phdcourses.ku.dk/DetailKursus.aspx?id=110814&sitepath=SUND
 The course takes place at the Center for Sundhed og Samfund - CSS - Øster Farimagsgade 5, 1014 Copenhagen.
 Classes run from 8:00 to 15:00 both days in class 35.3.13.
 
-## Whay will you need for the course:
+## What do you need for the course:
 You will work with your own laptop. You will need Internet during the course. 
 It is your own responsibility to be able to connect. 
 
