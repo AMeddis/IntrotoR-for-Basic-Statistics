@@ -10,7 +10,8 @@ Classes run from 8:00 to 15:00 both days in class 35.3.13.
 ## Materials:
 In the folders you can find the slides for the Lectures and the Exercises.
 Solutions will be uploaded after each class.
-You can download the entire folder (.zip) with "Code->
+You can download the entire folder (.zip) with "Code (green botton) -> Download ZIP" 
+then you can extract it in your desired folder. 
 
 link to padlet: https://padlet.com/alessandrameddis/intro-to-r-jl6hoio79ssxfhqm
 
