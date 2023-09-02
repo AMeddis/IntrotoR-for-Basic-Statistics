@@ -13,6 +13,9 @@ Solutions will be uploaded after each class.
 
 link to padlet: https://padlet.com/alessandrameddis/intro-to-r-jl6hoio79ssxfhqm
 
+### Supplementary
+know more on the data of exercise: https://doi.org/10.1016/j.rbmo.2023.06.011
+
 ## What do you need for the course:
 You will work with your own laptop. You will need Internet during the course. 
 It is your own responsibility to be able to connect. 
