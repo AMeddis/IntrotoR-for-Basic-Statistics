@@ -11,7 +11,7 @@ Classes run from 8:00 to 15:00 both days in class 35.3.13.
 In the folders you can find the slides for the Lectures and the Exercises.
 Solutions for the exercises will be uploaded after each class.
 
-A cheat sheet with all useful R command is also available.
+A cheat sheet with useful R commands is also available.
 
 You can download the entire folder (.zip) with "Code (green botton) -> Download ZIP" 
 then you can extract it in your desired folder. 
