@@ -21,6 +21,7 @@ Classes run from 8:00 to 15:00 both days in class 35.3.13.
   - Exploring data.frame (head(),summary(),str(),..)
   - Data manipulation with data.frame, Part I (create/delete variable, from continuous to categorical variable, subsetting by condition)
   - Descriptive analysis in R (table,mean,sd, min/max,quantile, sumamry statistics by group)
+  - Exercise: import data, data manipulation, descriptive statistics
 
  ### Day 2 (Wednesday):
 
