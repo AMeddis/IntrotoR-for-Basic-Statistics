@@ -7,6 +7,32 @@ https://phdcourses.ku.dk/DetailKursus.aspx?id=110814&sitepath=SUND
 The course takes place at the Center for Sundhed og Samfund - CSS - Øster Farimagsgade 5, 1014 Copenhagen.
 Classes run from 8:00 to 15:00 both days in class 35.3.13.
 
+
+### Day 1 (Monday): 
+
+#### Morning: 
+- Rstudio interface (create new script, working directory, Enviroment tab, Console tab)
+- Data structures in R (type of variables, Vector, Matrix, data.frame)
+- Operation with vectors
+- Exercise : create vectors and data.frame, operation with vectors
+
+  #### Afternoon:
+  - Data import/export
+  - Exploring data.frame (head(),summary(),str(),..)
+  - Data manipulation with data.frame, Part I (create/delete variable, from continuous to categorical variable, subsetting by condition)
+  - Descriptive analysis in R (table,mean,sd, min/max,quantile, sumamry statistics by group)
+
+ ### Day 2 (Wednesday):
+
+  #### Morning: 
+ - Data manipulation with data.frame, Part II (wide and long format, merge two data sets)
+ - Basic graphics in R (plot, lines, abline, points, boxplot, hist)
+ - Exercise: data manipulation in R
+
+   #### Afternoon:
+   - Exercise: data manipulation, descriptive and graphics in R
+   - Exercise: Error404
+    
 ## Materials:
 In the folders you can find the slides for the Lectures and the Exercises.
 Solutions for the exercises will be uploaded after each class.
