@@ -10,11 +10,11 @@ Classes run from 8:00 to 15:00 both days in class 35.3.13.
 
 ### Day 1 (Monday): 
 
-#### Morning: 
-- Rstudio interface (create new script, working directory, Enviroment tab, Console tab)
-- Data structures in R (type of variables, Vector, Matrix, data.frame)
-- Operation with vectors
-- Exercise : create vectors and data.frame, operation with vectors
+  #### Morning: 
+  - Rstudio interface (create new script, working directory, Enviroment tab, Console tab)
+  - Data structures in R (type of variables, Vector, Matrix, data.frame)
+  - Operation with vectors
+  - Exercise : create vectors and data.frame, operation with vectors
 
   #### Afternoon:
   - Data import/export
