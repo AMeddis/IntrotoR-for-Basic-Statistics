@@ -13,15 +13,15 @@ Classes run from 8:00 to 15:00 both days in class 35.3.13.
   #### Morning: 
   - Rstudio interface (create new script, working directory, Enviroment tab, Console tab)
   - Data structures in R (type of variables, Vector, Matrix, data.frame)
-  - Operation with vectors
-  - Exercise : create vectors and data.frame, operation with vectors
+  - Operation with vectors in R
+  - Exercise : create vectors and data.frame, operation with vectors in R
 
   #### Afternoon:
   - Data import/export
   - Exploring data.frame (head(),summary(),str(),..)
   - Data manipulation with data.frame, Part I (create/delete variable, from continuous to categorical variable, subsetting by condition)
   - Descriptive analysis in R (table,mean,sd, min/max,quantile, sumamry statistics by group)
-  - Exercise: import data, data manipulation, descriptive statistics
+  - Exercise: import data, data manipulation, descriptive statistics in R
 
  ### Day 2 (Wednesday):
 
