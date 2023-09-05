@@ -29,20 +29,16 @@ db_ex2<- data.frame(patID=1:20, sex=rep(c("M","F"), c(10,10)),
 #                             Question 1
 # transform db_ex1 into the long format with variables:
 #   - "biomarker" for the values of the measurement
-#   - "visit" for the time of measurement with values: "0","6","12"
+#   - "visit" for the time of measurement with values: "baseline","6months","12months"
 #-------------------------------------------------------------------------
 
-db_long<-reshape(db_ex1,direction="long",
-                 idvar="patID",
-                 varying=paste0("measure",0:2,"",sep=""),
-                 v.names="biomarker", timevar="visit", times=c(0,6,12))
+
 
 #------------------------------------------------------------------------
 #                             Question 2
 # merge the created long version of the data with db_ex2
 #-------------------------------------------------------------------------
 
-dbb<-merge(db_long,db_ex2,by="patID")
 
 
 #------------------------------------------------------------------------
