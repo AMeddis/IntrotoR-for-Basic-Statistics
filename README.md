@@ -28,11 +28,11 @@ Classes run from 8:00 to 15:00 both days in class 35.3.13.
   #### Morning: 
  - Data manipulation with data.frame, Part II (wide and long format, merge two data sets)
  - Basic graphics in R (plot, lines, abline, points, boxplot, hist)
- - Exercise: data manipulation in R
+ - Exercise: Error404
 
  #### Afternoon:
  - Exercise: data manipulation, descriptive and graphics in R
- - Exercise: Error404
+ 
     
 ## Materials:
 In the folders you can find the slides for the Lectures and the Exercises.
