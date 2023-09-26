@@ -16,6 +16,8 @@
 #shortcut for <- :  "Alt - "
 
 a<-1L
+d<-1
+typeof(d)
 b<-0.6
 c<-"0.3"
 
@@ -24,6 +26,11 @@ typeof(a)
 typeof(b)
 typeof(c)
 
+d<-as.integer(d)
+typeof(d)
+
+b<-as.character(b)
+b
 #is b numeric? TRUE/FALSE
 is.numeric(c)
 
@@ -56,7 +63,7 @@ v2
 IDs<-1:10
 IDs
 
-length<-0.5:0.7
+length<-0.5:2
 length
 
 
@@ -82,8 +89,9 @@ v1
 v2<-rep(c(0,1),2)
 v2
 
+rep(c(0,1), c(2,2))
 
-v3<-rep(c(0,1), c(2,5))
+v3<-rep(c(0,1), c(2,5) )
 v3
 
 
@@ -92,7 +100,9 @@ v3
 
 v1<-c(0,0.3,7,20)
 v1
+
 v1[2]
+
 v1[-1]
 
 v1[-c(1,2)]
@@ -104,7 +114,8 @@ v1[5]
 
 
 # By condition:
-v1>2
+ind<-v1>2
+v1[ind]
 #select only where the condition is TRUE:
 v1[v1>2]
 
@@ -132,6 +143,9 @@ a*b
 
 #operation on the all vector:
 a
+sum(a)
+
+
 sum(a+b)
 
 prod(a)
@@ -146,7 +160,10 @@ a %*% b
 sex<-c("female","male","male","female")
 sex=="female"
 
+sex="female"
+sex
 ## 
+
 
 income<-c("low","low","medium","high","medium","high")
 !(income %in% c("low","high"))
@@ -181,6 +198,8 @@ cbind(v1,v2)
 
 v3<-1:5
 v4<-1:3
+
+rbind(v3,v4)
 
 # Warning on the dimensions
 rbind(v1,v2,v3)
@@ -234,7 +253,16 @@ rownames(m1)<-c("1","2","3")
 #   data.frame
 ##-------------------
 
-db1<-data.frame(id=c(1,2,3), sex=c("Male","Female","Male"), age=c(46,53,38))
+db1<-data.frame(id=c(1,2,3),
+                sex=c("Male","Female","Male"),
+                age=c(46,53,38))
+
+
+
+ID=1:10
+sex=rep(c("M","F"),5)
+
+data<-data.frame(id=ID, Sex=sex)
 
 db1
 
@@ -246,15 +274,22 @@ db1[2,]
 dim(db1)
 
 names(db1)
+colnames(db1)<-c("pnr","sex","age")
 
-db2<-data.frame(id=1:100, sex=rep(c("Female","Male"),50), age=rnorm(100,40,10))
+colnames(db1)[1]<-"id"
+
+db1
+
+db2<-data.frame(id=1:100, 
+                sex=rep(c("Female","Male"),50), 
+                age=rnorm(100,40,10))
 
 db2
 head(db2)
 tail(db2)
 
 #ERROR
-db2$ID
+db1$ID
 
 ##--------------------
 #  list
