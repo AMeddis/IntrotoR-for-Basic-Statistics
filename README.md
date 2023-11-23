@@ -5,7 +5,7 @@ https://phdcourses.ku.dk/DetailKursus.aspx?id=110814&sitepath=SUND
 
 ## Place and Schedule
 The course takes place at the Center for Sundhed og Samfund - CSS - Øster Farimagsgade 5, 1014 Copenhagen.
-Classes run from 8:00 to 15:00 both days in class 7-0-08.
+Classes run from 8:00 to 15:00 both days in class 35.3.13.
 
 
 ### Day 1 (Monday): 
