@@ -5,9 +5,9 @@ https://phdcourses.ku.dk/DetailKursus.aspx?id=111387&sitepath=SUND
 
 ## Place and Schedule
 The course takes place at the Center for Sundhed og Samfund - CSS - Øster Farimagsgade 5, 1014 Copenhagen.
-Classes run the 27th and the 29th of August, from 8:00 to 15:00, both days in class 35-0-12 with one hour lunch break at 11.
+Classes run September the 30th and October the 2nd, from 8:00 to 15:00, both days in class 7.0.18 with one hour lunch break at 11.
 
-### Day 1 (Tuesday): 
+### Day 1 (Monday): 
 
   #### Morning: 
   - Rstudio interface (create new script, working directory, Enviroment tab, Console tab)
@@ -22,7 +22,7 @@ Classes run the 27th and the 29th of August, from 8:00 to 15:00, both days in cl
   - Descriptive analysis in R (table,mean,sd, min/max,quantile, sumamry statistics by group)
   - Exercise: import data, data manipulation, descriptive statistics in R
 
- ### Day 2 (Thursday):
+ ### Day 2 (Wednesday):
 
   #### Morning: 
  - Data manipulation with data.frame, Part II (wide and long format, merge two data sets)
