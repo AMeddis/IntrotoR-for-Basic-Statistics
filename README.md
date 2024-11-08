@@ -26,13 +26,17 @@ Classes run September the 30th and October the 2nd, from 8:00 to 15:00, both day
 
   #### Morning: 
  - Data manipulation with data.frame, Part II (wide and long format, merge two data sets)
- - Basic graphics in R (plot, lines, abline, points, boxplot, hist)
  - Exercise: Error404
 
  #### Afternoon:
- - Exercise: data manipulation, descriptive and graphics in R
+ - Exercise: data manipulation and descriptive in R
  
-    
+   ### Day 3 (Thursday):
+
+   #### Morning:
+   - Basic graphics in R (plot, lines, abline, points, boxplot, hist)
+   - Exercise: data manipulation, descriptive and graph- work with your data
+     
 ## Materials:
 In the folders you can find the slides for the Lectures and the Exercises.
 Solutions for the exercises will be uploaded after each class.
