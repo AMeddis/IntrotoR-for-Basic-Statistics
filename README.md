@@ -1,11 +1,11 @@
 # IntrotoR-for-Basic-Statistics
 This is the course homepage of the PhD course "Introduction to R for Basic Statistics".
 The course description, including the learning objectives, is available from the website of the PhD school:
-https://phdcourses.ku.dk/DetailKursus.aspx?id=111387&sitepath=SUND
+https://phdcourses.ku.dk/DetailKursus.aspx?id=112550&sitepath=SUND
 
 ## Place and Schedule
 The course takes place at the Center for Sundhed og Samfund - CSS - Øster Farimagsgade 5, 1014 Copenhagen.
-Classes run September the 30th and October the 2nd, from 8:00 to 15:00, both days in class 7.0.18 with one hour lunch break at 11.
+Classes run January the 20th, 22nd from 8:00 to 15:00,and the 23rd from 9:00 to 12:00. All days in class 15.3.01.
 
 ### Day 1 (Monday): 
 
@@ -35,7 +35,7 @@ Classes run September the 30th and October the 2nd, from 8:00 to 15:00, both day
 
    #### Morning:
    - Basic graphics in R (plot, lines, abline, points, boxplot, hist)
-   - Exercise: data manipulation, descriptive and graph- work with your data
+   - Exercise: data manipulation, descriptive and graph 
      
 ## Materials:
 In the folders you can find the slides for the Lectures and the Exercises.
