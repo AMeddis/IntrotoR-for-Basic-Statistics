@@ -57,7 +57,7 @@ It is your own responsibility to be able to connect.
 
 It is recommended to install the free statistical software R and R-studio before the course start:
 (https://posit.co/downloads/).
-As support you can check: http://r.sund.ku.dk/RandRStudio.html#installation-of-r-and-rstudio
+As support you can check: https://biostat.ku.dk/r/RandRStudio.html#installation-of-r-and-rstudio
 
 ## How to pass the course:
 To pass the course you have to attend 80% of all teaching units (we count the signatures).
