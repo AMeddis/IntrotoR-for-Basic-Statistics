@@ -23,5 +23,5 @@
 
 
 
-# 2b. Create a plot with the points at the median change from time 0 at varying
+# 2b. Create a scatterplot with the points at the median change from time 0 at varying
 #    of days where the color is defined by the treatment group. Add a legend.
