@@ -1,11 +1,11 @@
 # IntrotoR-for-Basic-Statistics
 This is the course homepage of the PhD course "Introduction to R for Basic Statistics".
 The course description, including the learning objectives, is available from the website of the PhD school:
-https://phdcourses.ku.dk/DetailKursus.aspx?id=112550&sitepath=SUND
+https://phdcourses.ku.dk/DetailKursus.aspx?id=113038&sitepath=SUND
 
 ## Place and Schedule
 The course takes place at the Center for Sundhed og Samfund - CSS - Øster Farimagsgade 5, 1014 Copenhagen.
-Classes run February the 17th, 19th from 8:00 to 15:00,and the 20th from 9:00 to 12:00. All days in class 7-0-22.
+Classes run August 25th, 27th from 8:00 to 15:00,and the 28th from 9:00 to 12:00. All days in class 
 
 ### Day 1 (Monday): 
 
@@ -46,7 +46,6 @@ A cheat sheet with useful R commands is also available.
 You can download the entire folder (.zip) with "Code (green botton) -> Download ZIP" 
 then you can extract it in your desired folder. 
 
-link to padlet: https://padlet.com/alessandrameddis/intro-to-r-jl6hoio79ssxfhqm
 
 ### Supplementary
 Know more on the data of exercise: https://doi.org/10.1016/j.rbmo.2023.06.011
