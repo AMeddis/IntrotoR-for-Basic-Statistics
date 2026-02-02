@@ -4,7 +4,7 @@ The course description, including the learning objectives, is available from the
 https://phdcourses.ku.dk/DetailKursus.aspx?id=113038&sitepath=SUND
 
 ## Place and Schedule
-The course takes place at the Center for Sundhed og Samfund - CSS at the Univeristy of Copenhagen.
+The course takes place at the Center for Sundhed og Samfund - CSS at the University of Copenhagen.
 
 ### Day 1 : 
 
