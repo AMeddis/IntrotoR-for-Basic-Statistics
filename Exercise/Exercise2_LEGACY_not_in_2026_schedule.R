@@ -1,3 +1,15 @@
+# ==========================================================================
+# LEGACY FILE -- not part of the current course schedule (see README.md)
+#
+# The 2026 Day-2 reshaping/merge exercise is Exercise2-2026.R, which
+# matches Exercise_day2.pdf / Exercise_day2_solutions.pdf ("Exercise B:
+# Reshaping data"). This file uses a different, unrelated dataset
+# (biomarker measurements for two randomized groups "A"/"B") that isn't
+# referenced by any exercise PDF currently in this folder.
+#
+# Kept for reference -- content below is unmodified.
+# ==========================================================================
+
 #----------------------------------------------------
 # Exercise 2
 #----------------------------------------------------------------------

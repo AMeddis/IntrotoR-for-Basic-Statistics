@@ -1,3 +1,17 @@
+# ==========================================================================
+# LEGACY FILE -- not part of the current course schedule (see README.md)
+#
+# Day 3 in the current curriculum is the AMH/birth-control-pill graphics
+# exercise (Exercise_day3.pdf, solved by solution-day-3-AMH-exercise.R),
+# unrelated to the diameter/db_join data used here. As written, this file
+# can only be completed after Exercise2-2026.R (the only script that
+# saves "db_join.rda" -- the old Exercise2_LEGACY... file never creates
+# it), so even its own dependency chain points to the current materials
+# while its topic was apparently swapped out for the AMH exercise.
+#
+# Kept for reference -- content below is unmodified.
+# ==========================================================================
+
 #----------------------------------------------------
 # Exercise 3
 #----------------------------------------------------------------------
