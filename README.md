@@ -25,7 +25,7 @@ The course takes place at the Center for Sundhed og Samfund - CSS at the Univers
 
   #### Morning: 
  - Data manipulation with data.frame, Part II (wide and long format, merge two data sets)
- - Exercise: Error404
+ - Exercise: Correct the error
 
    #### Afternoon:
  - Exercise: data manipulation and descriptive in R
