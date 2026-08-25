@@ -23,6 +23,11 @@ setwd("C:/Users/pzs913/Desktop/Course/IntrotoR")
 # You can also set it via the menu:
 # Session -> Set Working Directory -> Choose Directory
 
+# ==========================================================================
+# Assign values using '<-' (or '=')
+# ==========================================================================
+
+x <- 2.22 # same as x = 2.22
 
 # ==========================================================================
 # Functions
@@ -37,6 +42,11 @@ setwd("C:/Users/pzs913/Desktop/Course/IntrotoR")
 difference <- function(a, b) { # a, b are the input arguments
   a - b                        # a - b is the output
 }
+
+# ==========================================================================
+# Notice: '<-' _assigns the function to the name 'difference'
+# ==========================================================================
+
 
 # Call the function
 difference(3, 4)
@@ -68,6 +78,11 @@ difference(a = 3, b = 4)
 # R looks for input arguments literally named "a" and "b", which no
 # longer exist (they are now "first" and "second") -- this gives an error
 
+difference(3.78901, 4.11)
+
+result <- difference(3.78901, 4)
+
+round(result)
 
 # ==========================================================================
 # Help pages
@@ -76,7 +91,7 @@ difference(a = 3, b = 4)
 ?round
 help("round")
 
-round(x = 20.53647484, digits = 2)
+round(x = result, digits = 2)
 
 
 # ==========================================================================
@@ -89,6 +104,7 @@ install.packages("Publish")  # run once (or when updating)
 library(Publish)              # load the package in the current session
 
 ?univariateTable
+
 
 # Check the R version and which packages are currently attached
 sessionInfo()
@@ -167,77 +183,76 @@ ID
 # The "by" argument sets the step (default step = 1)
 seq(1, 10, by = 0.1)
 
-weight <- seq(0.5, 0.7, by = 0.1)
-weight
-
 # "length.out" sets the desired length of the output vector instead
-weight <- seq(0.5, 0.7, length.out = 4)
-weight
+seq(1, 10, length.out = 6)
 
 # rep(): create a vector by repeating values
 v1 <- rep(0, 3)
 v1
 
-c(0, 1)
-
-v2 <- rep(c(0, 1), 2)
-v2
-
-vec <- c(0, 1)
-rep(vec, c(2, 3))
-
 # --- Accessing vector elements ----------------------------------------------
 
 v1 <- c(0, 0.3, 7, 20)
 v1
+length(v1)
 
+# look at second element
 v1[2]
 
-# Everything but the first element
-v1[-1]
+# Elements 2 and 4
+v1[c(2,4)]
 
-# Elements 2 to 4
-v1[2:4]
+# Look at everything except the first element
+v1[-1]
 
 # Going beyond the vector's length returns NA
 v1[5]
 
-length(v1)
 
 # --- Logical operators: &, |, ==, !=, >, <, ... -----------------------------
 
 # Check which elements of a vector satisfy a condition -- returns TRUE/FALSE
 v1 > 2
 
-v3 <- c("B", "A", "C", "C", "C", "C", "B", "C", "B", "B")
 
-# Testing for equality requires "==" (a single "=" is assignment!)
-v3 == "A"
+# tabulate
+v3 <- c("Cancer", "Cancer", "Diabetes", "Cancer", "Diabetes", "Cardiovasc.", "Dermatol.", "Cancer", "Diabetes", "cancer")
+table(v3) 
+
+# Oops
+v3[10] = "Cancer"
+table(v3) 
+
+# Check condition - notice that evaluating for equality requires "==" (a single "=" is assignment!): result is a vector
+test <- (v3 == "Cancer")
+test
 
 # Using a single "=" instead overwrites v3 with the string "A" -- a common
 # mistake. Compare the (wrong) result:
-v3 = "A"
+test <- (v3 = "Cancer")
+test
 
 # %in%: check membership in a set of values
-v3 <- c("B", "A", "C", "C", "C", "C", "B", "C", "B", "B", NA)
-v3 %in% c("A", "C")
+v3 <- c("Cancer", "Cancer", "Diabetes", "Cancer", "Diabetes", "Cardiovasc.", "Dermatol.", "Cancer", "Diabetes", "cancer")
+test2 <- (v3 %in% c("Cardiovasc.", "Diabetes"))
+test2
 
 # "!=" means "is different from"
-v3 != "B"
+test3 <- (v3 != "Cancer")
 
 # --- Subsetting a vector with a condition -----------------------------------
 
-# "ind" holds a TRUE/FALSE vector
-ind <- v1 > 2
-
-# Square brackets return only the elements where ind is TRUE
-v1
-ind
-v1[ind]
+# "test3" holds a TRUE/FALSE vector
+v3
+v3[test3]
 
 # This can be written directly, without the intermediate variable:
-v1[v1 > 2]
+v3[(v3 != "Cancer")]
 
+# beware of missing values
+
+v3 <- c(v3,NA)
+v3[(v3 != "Cancer")]
 
 # ==========================================================================
 # Operations with vectors
@@ -271,25 +286,20 @@ difference(a, b)
 # More on comparison operators
 # ==========================================================================
 
-income <- c("low", "low", "medium", "high", "medium", "high")
+income <- c("low", "low", "medium", "high", "medium", "high", "low", "medium", "high", "medium", "high")
 income
 
-income %in% c("low", "high")
+incometest <- income %in% c("low", "high")
 
-!(income %in% c("low", "high"))
+incometest2 <- !(income %in% c("low", "high"))
 
-income != "low"
+incometest3 <- income != "low"
 
 # "|" = OR
-(income == "low" | income == "high")
+incometest4 <- (income == "low" | income == "high")
 
 # "&" = AND (no value can be "low" AND "high" at once -> all FALSE)
-(income == "low" & income == "high")
-
-a <- 1:10
-a
-a[a >= 3 & a <= 5]
-
+incometest5 <- (income == "low" & income == "high")
 
 # ==========================================================================
 # Factors: the preferred type for categorical variables (used later for
@@ -305,25 +315,112 @@ as.factor(income)
 typeof(income)
 
 income2 <- as.factor(income)
-income2[1:3]
+income2
 
 # To specify/change the labels of the levels, use factor() (not as.factor())
 income2 <- factor(income,
                    levels = c("low", "medium", "high"),
                    labels = c("L", "M", "H"))
-income2[1:3]
-
-BMI <- c("low", "low", "high", "low")
-BMI2 <- factor(BMI,
-               levels = c("low", "high"),
-               labels = c("low (Below 25)", "high (Above or equal to 25)"))
-BMI2
+income2
 
 
 # ==========================================================================
-# Exercise I
+# Matrix: a two-dimensional collection of elements of the SAME type
 # ==========================================================================
-# Create a new script for this exercise.
+
+# Create a matrix
+m1 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2)
+m1
+m1 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, byrow = TRUE)
+m1
+
+m2 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 3, byrow = TRUE)
+m2
+
+# --- rbind() and cbind() -----------------------------------------------
+
+hospitaldays <- c(0, 0.3, 7, 11, 6, NA, 20, NA)
+satisfaction <- c(1, 4, 3, 5, 2, 4, 3, 5)
+
+# rbind: bind vectors as rows (stacked on top of each other)
+# cbind: bind vectors as columns (side by side)
+matrix <- cbind(hospitaldays, satisfaction)
+matrix
+
+# BE CAREFUL with dimensions: vectors of different lengths cause
+# recycling warnings or errors
+v3 <- 1:5
+v4 <- 1:3
+
+v3
+v4
+rbind(v3, v4)
+
+# Warning: length mismatch (v3 has 5 elements, v1/v2 have 4)
+rbind(v1, v2, v3)
+rbind(v1, v2, v4)
+
+# Warning: length mismatch
+cbind(v1, v2)
+cbind(v1, v2, v3)
+cbind(v1, v2, v4)
+
+dim(m1)
+nrow(m1)
+ncol(m1)
+m1
+
+
+# Assign names: the number of names must match the number of columns (m1 has 2 columns)
+colnames(matrix)
+colnames(matrix) <- c("days", "satisfaction")
+
+matrix[1,1]
+matrix[3,2]
+
+matrix[3,"satisfaction"]
+
+# ==========================================================================
+# data.frame: a two-dimensional collection of elements of DIFFERENT types
+# ==========================================================================
+
+# Create/initialize a data.frame
+
+db1 <- data.frame(id = 1:8,        # "id =" sets the COLUMN name
+                  hospitaldays,
+                  satisfaction,
+                  age = c(46, 53, 38, 86, 53, 31, 19, 20))
+
+# Add a new data.frame with a Treatment column
+Treatment <- c("A", "B", "A", "B", "A", "B", "A", "B")
+db2 <- data.frame(db1, Treatment)
+
+# Square brackets, two dimensions -> two indices: [row, column]
+db1[2, 3]
+db2[2, 3]
+
+# Access a column by name
+db2$age
+db2[, "age"]
+
+# Dimensions
+dim(db1)
+dim(db2)
+
+# Change the column names
+colnames(db1)
+colnames(db1) <- c("pnr", "sex", "age")
+colnames(db1)
+
+colnames(db1)[1] <- "id"
+db1
+
+head(db2)
+tail(db2)
+
+# ==========================================================================
+# Exercise I - question 1 and question 2
+# ==========================================================================
 
 dbf <- read.csv("https://raw.githubusercontent.com/AMeddis/IntrotoR-for-Basic-Statistics/refs/heads/main/data_exercise/db_follicle.csv")
 dbp <- read.csv("https://raw.githubusercontent.com/AMeddis/IntrotoR-for-Basic-Statistics/refs/heads/main/data_exercise/db_patient.csv")
@@ -353,146 +450,22 @@ dbp$Disease2 <- factor(dbp$Disease)
 summary(dbp)
 
 # 4. Create a new variable Cancer that groups Disease into
-#    "Breast cancer" vs. "Others"
-dbp$Disease == "Breast_cancer"
+#    "Breast cancer" vs. "Others" - we will see later that 'ifelse' is a nicer way to do this
 
+dbp$Disease == "Breast_cancer"
 dbp$Cancer <- "Others"
 dbp$Cancer[dbp$Disease == "Breast_cancer"] <- "Breast_Cancer"
 dbp$Cancer2 <- as.factor(dbp$Cancer)
 summary(dbp)
 
-
-# ==========================================================================
-# Matrix: a two-dimensional collection of elements of the SAME type
 # ==========================================================================
 
-# Create a matrix
-m1 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2)
-m1
-m1 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, byrow = TRUE)
-m1
-
-m2 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 3, byrow = TRUE)
-m2
-
-# --- rbind() and cbind() -----------------------------------------------
-
-days <- c(0, 0.3, 7, 20)
-satisfaction <- c(1, 4, 3, 5)
-
-v1
-v2
-# rbind: bind vectors as rows (stacked on top of each other)
-rbind(v1, v2)
-# cbind: bind vectors as columns (side by side)
-cbind(days, satisfaction)
-
-# BE CAREFUL with dimensions: vectors of different lengths cause
-# recycling warnings or errors
-v3 <- 1:5
-v4 <- 1:3
-
-v3
-v4
-rbind(v3, v4)
-
-# Warning: length mismatch (v3 has 5 elements, v1/v2 have 4)
-rbind(v1, v2, v3)
-rbind(v1, v2, v4)
-
-# Warning: length mismatch
-cbind(v1, v2)
-cbind(v1, v2, v3)
-cbind(v1, v2, v4)
-
-dim(m1)
-nrow(m1)
-ncol(m1)
-m1
-
-rownames(m1)
-rownames(m1) <- c("A", "B")
-m1
-
-m1["A", ]
-
-var1 <- c(0, 0.3, 7, 20)
-V2 <- c(1, 4, 3, 5)
-m1 <- cbind(var1, V2)
-m1
-colnames(m1)
-
-colnames(m1) <- c("days", "satisfaction")
-
-colnames(m1)[2] <- c("score")
-m1
-
-# The number of names must match the number of columns (m1 has 2 columns)
-colnames(m1) <- c("1a", "2a")
-m1
-
-# ERROR: the number of names must match the number of ROWS (m1 has 4 rows,
-# not 3) -- this intentionally fails, to illustrate the rule
-rownames(m1) <- c("1a", "2a", "3a")
-
-
-# ==========================================================================
-# data.frame: a two-dimensional collection of elements of DIFFERENT types
-# ==========================================================================
-
-# Create/initialize a data.frame
-db1 <- data.frame(id = c(1, 2, 3),        # "id =" sets the COLUMN name
-                   sex = c("Male", "Female", "Male"),
-                   age = c(46, 53, 38))
-
-ID <- 1:10
-sex <- rep(c("M", "F"), 5)
-# Caution: "data" is also the name of a base R function (data()); using it
-# as a variable name here shadows that function in this session
-data <- data.frame(ID, sex)
-
-# Add a new data.frame with a Treatment column
-Treatment <- c("A", "B", "A")
-db2 <- data.frame(db1, Treatment)
-
-# --- Accessing a data.frame ----------------------------------------------
-
-db1
-
-# Access a column by name
-db1$sex
-db1[, "sex"]
-
-# Square brackets, two dimensions -> two indices: [row, column]
-db1[2, 3]
-# Second column, all rows
-db1[, 2]
-# Second row, all columns
-db1[2, ]
-
-# Dimensions
-dim(db1)
-
-# Change the column names
-colnames(db1)
-colnames(db1) <- c("pnr", "sex", "age")
-colnames(db1)
-
-colnames(db1)[1] <- "id"
-db1
-
-# Reuse "db2" for a larger, simulated data.frame
-db2 <- data.frame(id = 1:100,
-                   sex = rep(c("Female", "Male"), 50),
-                   age = rnorm(100, 40, 10))
-
-db2
-head(db2)
-tail(db2)
 
 # Careful with typos/case: "ID" does not exist in db1 (only "id" does),
 # so this returns NULL instead of an error
 db1$ID
+db1$id
+db1$pnr
 
 
 # ==========================================================================
@@ -743,8 +716,21 @@ aggregate(weight ~ BMI.cat, data = db1_ex, FUN = mean, na.rm = TRUE)
 
 
 # ==========================================================================
-# Question 3
+# Exercise Questions 2 (last part revisited), 3 and 4
 # ==========================================================================
+
+
+# 4. Create a new variable Cancer that groups Disease into ..
+# 
+#    dbp$Disease == "Breast_cancer"
+#    dbp$Cancer <- "Others"
+#    dbp$Cancer[dbp$Disease == "Breast_cancer"] <- "Breast_Cancer"
+#    dbp$Cancer2 <- as.factor(dbp$Cancer)
+#    
+#    'ifelse' is a nicer way to do this:
+
+dbp$test <- ifelse(dbp$Disease == "Breast_cancer", "Breast_cancer", "Other")
+
 # Age is a continuous covariate. We want an idea of the age distribution of
 # the patients included in the study.
 
@@ -795,3 +781,5 @@ table(BC$AgeCat2)
 
 # 3. Mean and standard deviation of age
 round(c(mean(BC$Age), sd(BC$Age)), 2)
+
+====
